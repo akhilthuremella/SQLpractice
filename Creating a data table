@@ -1,0 +1,52 @@
+// Objective: create a data table with people and their birthdays, emails, and social media handles
+
+CREATE TABLE friends (
+  id INTEGER,
+  name TEXT,
+  birthday DATE
+);
+
+INSERT INTO friends(id,name,birthday)
+VALUES (1, 'Ororo Munore', 1940-05-30);
+
+INSERT INTO friends(id,name,birthday)
+VALUES (2, 'John Joseph', 1941-04-25);
+
+INSERT INTO friends(id,name,birthday)
+VALUES (3, 'Nick Nicholas', 1943-07-12);
+
+UPDATE friends
+SET name = 'Storm'
+WHERE id = 1;
+
+ALTER TABLE friends
+ADD COLUMN email TEXT;
+
+UPDATE friends
+SET email = 'storm@codecademy.com'
+WHERE id = 1;
+
+UPDATE friends
+SET email = 'johnjoseph@codecademy.com'
+WHERE id = 2;
+
+UPDATE friends
+SET email = 'nicknicholas@codecademy.com'
+WHERE id = 3;
+
+DELETE FROM friends
+WHERE id = 1;
+
+ALTER TABLE friends
+ADD COLUMN instagram TEXT;
+
+UPDATE friends
+SET instagram = '@john_joseph123'
+WHERE id = 2;
+
+UPDATE friends
+SET instagram = '@nickyN120'
+WHERE id = 3;
+
+
+SELECT * FROM friends;// to access table contents
